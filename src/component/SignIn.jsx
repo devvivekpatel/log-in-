@@ -19,16 +19,24 @@ export default class SignIn extends Component{
             this.setState({checkArr:newArr})
 
             let userPresent=this.state.checkArr.filter((item)=>{
-                return item.email === this.state.email && item.password === this.state.password
+                return item.email === this.state.email 
             });
 
             if(userPresent.length>=1){
+                let userPassword = this.state.checkArr.filter((item)=>{
+                    return item.password === this.state.password
+                })
                 
-                alert("Yes, he is present")
-            }else{
+                if(userPassword.length>=1){
+                    alert("login Successful")
+                }
+                else{
+                    alert("Email matched but password not")
+                }
+            }
+            else{
                 alert("NOt , present")
             }
-
 
            this.setState({name:'',password:'',email:''})
         }
@@ -43,7 +51,7 @@ export default class SignIn extends Component{
         }
         }
 
-        
+
 
  render(){
     return(
