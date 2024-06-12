@@ -10,6 +10,7 @@ export default class Navbar extends Component{
             <ul className="w-full h-10 flex justify-around items-center bg-purple-600 text-white font-bold">
                 <li><Link to='/signin' className='nav-link active'>Log In</Link></li>
                 <li><Link to='/signup' className='nav-link active'>Sign Up</Link></li>
+                <li><Link to='/forgetpassword' className='nav-link active'>Forget Password</Link></li>
             </ul>
             </>
         )

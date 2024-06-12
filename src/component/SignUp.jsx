@@ -18,7 +18,7 @@ export default class SignUp extends Component{
 
             let userPresent=this.state.arr.filter((item)=>{
                 return item.email === this.state.email ;
-            });
+            });                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
 
             if(userPresent.length>=1){
                 alert("User is already registered");
@@ -75,7 +75,7 @@ export default class SignUp extends Component{
 
                 <div>
                 <label htmlFor="password">Password :</label>
-                <input type="password" id="password" className="border-2 border-black ml-4" placeholder="*2422viv" onChange={(e)=>this.setState({password:e.target.value})} minLength={8} value={this.state.password}/>
+                <input type="password" id="password" className="border-2 border-black ml-4" placeholder="*2422viv" onChange={(e)=>this.setState({password:e.target.value})} minLength={8} value={this.state.password} />
                 <span>{this.state.passEmpty? <p className="text-red-700">*requiered</p>:<p></p>}</span>
                 </div>
 
